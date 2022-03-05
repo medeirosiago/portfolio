@@ -15,7 +15,7 @@ const Navbar = () => {
   const [show, setShow] = useState(true);
 
   const controlNavbar = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 200) {
       setShow(false);
     } else {
       setShow(true);
@@ -23,9 +23,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', controlNavbar)
+    window.addEventListener('scroll', controlNavbar);
     return () => {
-      window.removeEventListener('scroll', controlNavbar)
+      window.removeEventListener('scroll', controlNavbar);
     };
   }, []);
 
@@ -38,7 +38,9 @@ const Navbar = () => {
         <Link to="/about" activeStyle>
           <BarsAbout />
         </Link>
-        <BarsHome />
+        <Link to="/" activeStyle>
+          <BarsHome />
+        </Link>
         <BarsProjects />
         <BarsContact />
         <NavMenu>

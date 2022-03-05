@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
 	background: black;
 	height: 80px;
 	display: flex;
@@ -13,4 +13,24 @@
 
 .false {
 	display: none;
+} */
+
+.nav {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	transition: 0.8s ease-in;
+}
+
+.true {
+	background: black;
+	opacity: 0.9;
+	top: 0;
+	
+}
+
+.false {
+	top: -80px;
 }
