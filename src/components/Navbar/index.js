@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 import {
-  Nav,
   NavLink,
   BarsHome,
   BarsAbout,
@@ -11,13 +12,32 @@ import {
 } from './NavbarElements';
 
 const Navbar = () => {
+  const [show, setShow] = useState(true);
+
+  const controlNavbar = () => {
+    if (window.scrollY > 100) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', controlNavbar)
+    };
+  }, []);
+
   return (
     <>
-      <Nav>
+      <nav className={`nav ${show}`}>
         <NavLogo to="/">
           <h1>Iago Medeiros</h1>
         </NavLogo>
-        <BarsAbout />
+        <Link to="/about" activeStyle>
+          <BarsAbout />
+        </Link>
         <BarsHome />
         <BarsProjects />
         <BarsContact />
@@ -32,7 +52,7 @@ const Navbar = () => {
             Contact
           </NavLink>
         </NavMenu>
-      </Nav>
+      </nav>
     </>
   );
 };

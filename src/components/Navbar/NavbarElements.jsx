@@ -4,15 +4,19 @@ import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { IoMdContact } from "react-icons/io";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 
-export const Nav = styled.nav`
-	background: black;
-	height: 80px;
-	display: flex;
-	opacity: 0.9;
-	justify-content: space-between;
-	padding: 0.5rem calc(100vw - 1000px) / 2);
-	z-index: 10;
-`
+// export const Nav = styled.nav`
+// 	background: black;
+// 	height: 80px;
+// 	display: flex;
+// 	position: fixed;
+// 	width: 100%;
+// 	top: 0;
+// 	opacity: 0.9;
+// 	justify-content: space-between;
+// 	padding: 0.5rem calc(100vw - 1000px) / 2);
+// 	z-index: 10;
+// 	backdrop-filter: blur(100px);
+// `
 
 export const NavLink = styled(Link)`
 	color: #F22;
@@ -24,7 +28,7 @@ export const NavLink = styled(Link)`
 	cursor: pointer;
 
 	&.active {
-		color: #142cf1;
+		color: #DCDCDC;
 	}
 `
 

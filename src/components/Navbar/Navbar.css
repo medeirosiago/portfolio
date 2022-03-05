@@ -1,0 +1,16 @@
+.nav {
+	background: black;
+	height: 80px;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	opacity: 0.9;
+	justify-content: space-between;
+	z-index: 10;
+	transition: all 21s ease-out;
+}
+
+.false {
+	display: none;
+}
